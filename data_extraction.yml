@@ -1,0 +1,23 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandComponent.schema.json
+type: command
+
+name: data_extraction
+display_name: data_extraction
+version: 1.5
+
+inputs: 
+  start_index:
+    type: integer
+  end_index:
+    type: integer
+outputs:
+  output:
+    type: uri_folder
+  
+code: ./data-extraction-src
+environment: azureml:docker-image-for-pair-matching:6
+command: >-
+  python form-recognizer.py 
+  --start_index ${{inputs.start_index}}
+  --end_index ${{inputs.end_index}}
+  --output ${{outputs.output}}

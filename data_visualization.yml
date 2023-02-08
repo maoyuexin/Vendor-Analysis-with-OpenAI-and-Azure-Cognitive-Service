@@ -1,0 +1,19 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandComponent.schema.json
+type: command
+
+name: data_visualization
+display_name: data_visualization
+version: 1.0.4
+
+inputs:
+  input: 
+    type: uri_folder
+outputs:
+  output:
+    type: uri_folder
+code: ./data-visualization-src
+environment: azureml:docker-image-for-pair-matching:7
+command: >-
+  python data_visualization.py 
+  --input ${{inputs.input}}
+  --output ${{outputs.output}}

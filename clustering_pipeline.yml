@@ -1,0 +1,29 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandComponent.schema.json
+type: command
+
+name: data_pair_clustering
+display_name: data_pair_clustering
+version: 1.0.2
+
+inputs: 
+  input:
+    type: uri_file
+  block_attributes:
+    type: string
+  cluster_attributes:
+    type: string
+  similarity_threshold: 
+    type: number
+    default: 0.85
+outputs:
+  output:
+    type: uri_folder
+code: ./clustering-src
+environment: azureml:docker-image-for-pair-matching:6
+command: >-
+  python pair_clustering_jsonInput.py 
+  --input ${{inputs.input}}
+  --block_attributes ${{inputs.block_attributes}}
+  --cluster_attributes ${{inputs.cluster_attributes}}
+  --similarity_threshold ${{inputs.similarity_threshold}}
+  --output ${{outputs.output}}
