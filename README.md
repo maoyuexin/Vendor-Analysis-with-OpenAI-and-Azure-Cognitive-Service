@@ -1,6 +1,6 @@
-# vendor-invoice-analysis
+# Vendor-Invoice-Analysis
 
-End to end solution for vendor invoice analysis using Azure Cognitive Service and Azure ML. This repositiory including the source code to create the Azure pipeline and each components for the Vendor Invoice Analysis PoC.  
+End to end solution for vendor invoice analysis using Azure Cognitive Service, OpenAI and  Azure ML. This repositiory including the source code to create the Azure pipeline and each components for the Vendor Invoice Analysis PoC.  
 
 Invoice Data used in this PoC : https://huggingface.co/datasets/rvl_cdip
 
