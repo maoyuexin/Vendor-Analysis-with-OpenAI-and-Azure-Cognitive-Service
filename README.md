@@ -57,25 +57,6 @@ Follow the enviroment/enviroment.ipynb to create the python envrioment to run th
 Follow the pipeline_pair_clustering.ipynb to create the Azure ML reuseable components and pipeline
 
 
-**`Notice`** :  the classification model is trained seperately and deployed as an endpoint in AzureML which is not included in this repository. You can skip the data categorization step
-
-### Standalone version:
-
-If you would like to test a seperate component or python script instead of setting up the pipeline,  you can directly run the python script and find the run command in the corresponding yaml file
-
-e.g., the following python command is used to run the product clustering code
-```
- python pair_clustering.py 
-  --file_path_in ${{inputs.file_path_in}}
-  --file_name ${{inputs.file_name}}
-  --file_type ${{inputs.file_type}}
-  --block_attributes ${{inputs.block_attributes}}
-  --cluster_attributes ${{inputs.cluster_attributes}}
-  --similarity_threshold ${{inputs.similarity_threshold}}
-  --file_path_out ${{outputs.file_path_out}}
-```  
-
-
 
 <br />
 <br />
