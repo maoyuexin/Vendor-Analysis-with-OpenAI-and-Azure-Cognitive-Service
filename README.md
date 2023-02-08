@@ -8,29 +8,33 @@ Invoice Data used in this PoC : https://huggingface.co/datasets/rvl_cdip
 
  ## Introduction
  
-![Screenshot 2022-12-06 200734](https://user-images.githubusercontent.com/3723642/206070183-0fe4f2de-451d-4730-89d7-62ccc52f429e.png)
+![Screenshot 2023-02-08 113237](https://user-images.githubusercontent.com/3723642/217607445-69b96fa2-8ac7-49fd-91c6-4fb54f35611d.png)
 
  ## Solution Architechture
 
-![Screenshot 2022-12-06 200651](https://user-images.githubusercontent.com/3723642/206070050-8425a22d-c52c-4f42-9ed5-b395423553f8.png)
+
+![Screenshot 2023-02-08 113334](https://user-images.githubusercontent.com/3723642/217607651-2f215adf-c1a9-411d-8258-dbbac5e32244.png)
+
+![Screenshot 2023-02-08 113416](https://user-images.githubusercontent.com/3723642/217607807-66fb88cb-4dfd-4635-af48-df4e94d66517.png)
 
 
+## Dashboard
 
-![Screenshot 2022-12-06 200317](https://user-images.githubusercontent.com/3723642/206069670-92e037c0-8c1b-43a1-a3e9-581da46149ca.png)
+![Screenshot 2023-02-08 113507](https://user-images.githubusercontent.com/3723642/217608120-f518ce4e-f477-4170-b4c9-fd4aa6911990.png)
+![Screenshot 2023-02-08 113548](https://user-images.githubusercontent.com/3723642/217608124-9c6abe51-a2f2-4272-beff-42bc1db45d62.png)
+
 
 ## Code Directory
 
 |Directory|Description|
 |-|-|
 |clustering-src|Including the Python source file for the clustering component (Based on customized EM algorithm). |
-|data-categorzation-src|Including the Python source file for the data classification component.|
+|data-enrichment-openai-src|Including the Python source file for the OpenAI data enrichment and clasification component.|
 |data-enrichment-src|Including the Python source file for the data enrichment component using Bing APIs.|
 |data-extraction-src|Including the Python source file for the data extraction component using Azure Form Recognizer. |
 |data-visualization-src|Including the Python source file for the data prepration for PowerBI visualization.|
 |clustering_pipeline|Sample Yaml file to run a Azure ML job for data clustering|
-|environment|Jupyter notebook to show how to create a python enviroment in Azure.|
-|clustering_standalone|Sample Yaml file to run a Azure ML job for data clustering standalone mode.|
-|data_categorzation|Sample Yaml file to register a data categorization component.|
+|data_enrichment_openAI|Sample Yaml file to register a openAI data enrichment and clasification component.|
 |data_enrichment|Sample Yaml file to register a data enrichment component.|
 |data_visualization|Sample Yaml file to register a data transformation for PowerBI visualization component.|
 |pipeline_pair_clustering|Main Jupyter notebook that shows the flow to run register components and run the PoC pipeline.|
