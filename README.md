@@ -16,14 +16,14 @@ Invoice Data used in this PoC : https://huggingface.co/datasets/rvl_cdip
 ![Screenshot 2023-02-08 113334](https://user-images.githubusercontent.com/3723642/217607651-2f215adf-c1a9-411d-8258-dbbac5e32244.png)
 
 ![Screenshot 2023-02-08 113416](https://user-images.githubusercontent.com/3723642/217607807-66fb88cb-4dfd-4635-af48-df4e94d66517.png)
+![Screenshot 2023-05-20 233455](https://github.com/maoyuexin/Vendor-Analysis-with-OpenAI-and-Azure-Cognitive-Service/assets/3723642/ded5fd48-81a3-4d14-b756-c277b13efb8a)
 
 
 ## Dashboard
 
 ![Screenshot 2023-02-08 113507](https://user-images.githubusercontent.com/3723642/217608120-f518ce4e-f477-4170-b4c9-fd4aa6911990.png)
 ![Screenshot 2023-02-08 113548](https://user-images.githubusercontent.com/3723642/217608124-9c6abe51-a2f2-4272-beff-42bc1db45d62.png)
-![Screenshot 2023-05-20 233455](https://github.com/maoyuexin/Vendor-Analysis-with-OpenAI-and-Azure-Cognitive-Service/assets/3723642/ded5fd48-81a3-4d14-b756-c277b13efb8a)
-
+ 
 
 ## Code Directory
 
