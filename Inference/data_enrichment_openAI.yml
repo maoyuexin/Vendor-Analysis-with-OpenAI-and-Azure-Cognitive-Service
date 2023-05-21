@@ -1,0 +1,48 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandComponent.schema.json
+type: command
+
+name: openai_enrichment
+display_name: openai_enrichment
+description: Enrich and categorize data based on OpenAI API
+version: 1.1.5
+
+inputs:
+  file_path_in: 
+    type: uri_folder
+  gpt_engine:
+    type: string
+  temperature_clasify:
+    type: number
+    default: 0.9
+  max_tokens_clasify:
+    type: integer
+    default: 100
+  temperature_summarize:
+    type: number
+    default: 0.9
+  max_token_summarize:
+    type: integer
+    default: 500
+  top_p:
+    type: number
+    default: 1.0
+  frequency_penalty: 
+    type: number
+    default: 0.5
+  presence_penalty: 
+    type: number
+    default: 0.5
+  best_of: 
+    type: number
+    default: 1
+outputs:
+  file_path_out:
+    type: uri_folder
+code: ./data-enrichment-openai-src
+environment: azureml:docker-image-for-pair-matching:8
+command: >-
+  python data_enrichment_openAI.py 
+  --file_path_in ${{inputs.file_path_in}}
+  --gpt_engine ${{inputs.gpt_engine}}
+  --file_path_out ${{outputs.file_path_out}}
+ 

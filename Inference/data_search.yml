@@ -1,0 +1,21 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandComponent.schema.json
+type: command
+
+name: cog_search
+display_name: cog_search
+description: Search for similar products from Cognitive Search
+version: 1.0.2
+
+inputs:
+  file_path_in: 
+    type: uri_folder
+outputs:
+  file_path_out:
+    type: uri_folder
+code: ./data_searhing-src
+environment: azureml:docker-image-for-pair-matching:15
+command: >-
+  python data_searhing.py
+  --file_path_in ${{inputs.file_path_in}}
+  --file_path_out ${{outputs.file_path_out}}
+ 

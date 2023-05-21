@@ -1,0 +1,21 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandComponent.schema.json
+type: command
+
+name: teams_notification
+display_name: teams_notification
+description: Send results to teams channel
+version: 1.0.3
+
+inputs:
+  file_path_in: 
+    type: uri_folder
+outputs:
+  file_path_out:
+    type: uri_folder
+code: ./data-teams-webhook-src
+environment: azureml:docker-image-for-pair-matching:15
+command: >-
+  python data-teams-webhook.py
+  --file_path_in ${{inputs.file_path_in}}
+  --file_path_out ${{outputs.file_path_out}}
+ 
